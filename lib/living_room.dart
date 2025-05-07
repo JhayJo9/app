@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 
-class BathroomPage extends StatefulWidget {
-  const BathroomPage({super.key});
+
+class LivingRoomPage extends StatefulWidget {
+  const LivingRoomPage({super.key});
 
   @override
-  State<BathroomPage> createState() => _BathroomPageState();
+  State<LivingRoomPage> createState() => _LivingRoomPageState();
 }
 
-class _BathroomPageState extends State<BathroomPage> {
+class _LivingRoomPageState extends State<LivingRoomPage> {
   bool isLightOn = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Bathroom Controls"),
+        title: const Text("Living Room Controls"),
         backgroundColor: Colors.blue,
       ),
       body: Container(
@@ -38,7 +39,7 @@ class _BathroomPageState extends State<BathroomPage> {
           children: <Widget>[
             const SizedBox(height: 30),
 
-            // Bathroom Icon with light effect
+            // Living Room Icon with light effect
             Container(
               height: 150,
               width: 150,
@@ -56,7 +57,7 @@ class _BathroomPageState extends State<BathroomPage> {
                     : [],
               ),
               child: Icon(
-                Icons.bathroom,
+                Icons.living, // Using the living room icon
                 size: 100,
                 color: isLightOn ? Colors.amber : Colors.grey,
               ),
@@ -66,7 +67,7 @@ class _BathroomPageState extends State<BathroomPage> {
 
             // Status Text
             Text(
-              isLightOn ? "Bathroom Light: ON" : "Bathroom Light: OFF",
+              isLightOn ? "Living Room Light: ON" : "Living Room Light: OFF",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -124,6 +125,7 @@ class _BathroomPageState extends State<BathroomPage> {
             ),
 
             const SizedBox(height: 40),
+
           ],
         ),
       ),

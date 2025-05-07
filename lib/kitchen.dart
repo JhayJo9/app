@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 
-class BathroomPage extends StatefulWidget {
-  const BathroomPage({super.key});
+class KitchenPage extends StatefulWidget {
+  const KitchenPage({super.key});
 
   @override
-  State<BathroomPage> createState() => _BathroomPageState();
+  State<KitchenPage> createState() => _KitchenPageState();
 }
 
-class _BathroomPageState extends State<BathroomPage> {
+class _KitchenPageState extends State<KitchenPage> {
   bool isLightOn = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Bathroom Controls"),
+        title: const Text("Kitchen Controls"),
         backgroundColor: Colors.blue,
       ),
       body: Container(
@@ -38,7 +38,7 @@ class _BathroomPageState extends State<BathroomPage> {
           children: <Widget>[
             const SizedBox(height: 30),
 
-            // Bathroom Icon with light effect
+            // Kitchen Icon with light effect
             Container(
               height: 150,
               width: 150,
@@ -56,7 +56,7 @@ class _BathroomPageState extends State<BathroomPage> {
                     : [],
               ),
               child: Icon(
-                Icons.bathroom,
+                Icons.kitchen,
                 size: 100,
                 color: isLightOn ? Colors.amber : Colors.grey,
               ),
@@ -66,7 +66,7 @@ class _BathroomPageState extends State<BathroomPage> {
 
             // Status Text
             Text(
-              isLightOn ? "Bathroom Light: ON" : "Bathroom Light: OFF",
+              isLightOn ? "Kitchen Light: ON" : "Kitchen Light: OFF",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -124,6 +124,9 @@ class _BathroomPageState extends State<BathroomPage> {
             ),
 
             const SizedBox(height: 40),
+
+
+
           ],
         ),
       ),

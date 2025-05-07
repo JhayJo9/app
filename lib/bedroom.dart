@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_switch/flutter_switch.dart';
 
-class BathroomPage extends StatefulWidget {
-  const BathroomPage({super.key});
+import 'package:flutter_switch/flutter_switch.dart'; // Add this package to pubspec.yaml
+
+class BedroomPage extends StatefulWidget {
+  const BedroomPage({super.key});
 
   @override
-  State<BathroomPage> createState() => _BathroomPageState();
+  State<BedroomPage> createState() => _BedroomPageState();
 }
 
-class _BathroomPageState extends State<BathroomPage> {
+class _BedroomPageState extends State<BedroomPage> {
   bool isLightOn = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Bathroom Controls"),
+        title: const Text("Bedroom Controls"),
         backgroundColor: Colors.blue,
       ),
       body: Container(
@@ -38,7 +39,7 @@ class _BathroomPageState extends State<BathroomPage> {
           children: <Widget>[
             const SizedBox(height: 30),
 
-            // Bathroom Icon with light effect
+            // Bedroom Icon with light effect
             Container(
               height: 150,
               width: 150,
@@ -56,7 +57,7 @@ class _BathroomPageState extends State<BathroomPage> {
                     : [],
               ),
               child: Icon(
-                Icons.bathroom,
+                Icons.bedroom_parent,
                 size: 100,
                 color: isLightOn ? Colors.amber : Colors.grey,
               ),
@@ -66,7 +67,7 @@ class _BathroomPageState extends State<BathroomPage> {
 
             // Status Text
             Text(
-              isLightOn ? "Bathroom Light: ON" : "Bathroom Light: OFF",
+              isLightOn ? "Bedroom Light: ON" : "Bedroom Light: OFF",
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -124,6 +125,9 @@ class _BathroomPageState extends State<BathroomPage> {
             ),
 
             const SizedBox(height: 40),
+
+            // Additional information or controls can be added here
+
           ],
         ),
       ),
